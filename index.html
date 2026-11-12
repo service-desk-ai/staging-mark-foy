@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mark Foy's</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="env-ribbon" id="env-ribbon" hidden></div>
+  <div class="promo" data-testid="promo-banner">Free shipping on orders over $100</div>
+  <header class="site-header">
+    <a class="brand" href="./">Mark Foy's</a>
+    <div class="search">
+      <input id="search" data-testid="search-input" type="search" placeholder="Search the store" autocomplete="off">
+    </div>
+    <button class="bag-button" id="open-bag" data-testid="open-bag">Bag <span id="bag-count" data-testid="bag-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>The summer edit</h1>
+      <p>Natural fabrics, considered pieces, made to last the season and the next.</p>
+    </section>
+    <p class="results-note" id="results-note" data-testid="results-note"></p>
+    <section class="grid" id="grid" data-testid="product-grid"></section>
+  </main>
+
+  <aside class="bag" id="bag" data-testid="bag" aria-hidden="true">
+    <div class="bag-head">
+      <h2>Your bag</h2>
+      <button class="icon-button" id="close-bag" aria-label="Close bag">&times;</button>
+    </div>
+    <div class="bag-lines" id="bag-lines" data-testid="bag-lines"></div>
+    <form class="code-form" id="code-form" data-testid="code-form">
+      <input id="code-input" data-testid="code-input" placeholder="Discount code" autocomplete="off">
+      <button type="submit" data-testid="apply-code">Apply</button>
+    </form>
+    <p class="code-msg" id="code-msg" data-testid="code-msg"></p>
+    <div class="codes" id="codes" data-testid="applied-codes"></div>
+    <dl class="totals" data-testid="totals">
+      <div><dt>Subtotal</dt><dd id="t-subtotal" data-testid="subtotal"></dd></div>
+      <div><dt>Discount</dt><dd id="t-discount" data-testid="discount"></dd></div>
+      <div><dt>Shipping</dt><dd id="t-shipping" data-testid="shipping"></dd></div>
+      <div class="grand"><dt>Total</dt><dd id="t-total" data-testid="total"></dd></div>
+    </dl>
+    <a class="checkout-button" href="checkout.html" data-testid="checkout">Checkout</a>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <footer class="site-footer"><span>&copy; Mark Foy's</span><span id="build" data-testid="build"></span></footer>
+  <script type="module" src="src/ui/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · Mark Foy's</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="env-ribbon" id="env-ribbon" hidden></div>
+  <header class="site-header">
+    <a class="brand" href="./">Mark Foy's</a>
+    <span class="secure">Secure checkout</span>
+  </header>
+  <main class="checkout">
+    <section>
+      <h1>Checkout</h1>
+      <div id="summary-lines" data-testid="summary-lines"></div>
+      <dl class="totals" data-testid="checkout-totals">
+        <div><dt>Subtotal</dt><dd data-testid="subtotal" id="c-subtotal"></dd></div>
+        <div><dt>Discount</dt><dd data-testid="discount" id="c-discount"></dd></div>
+        <div><dt>Shipping</dt><dd data-testid="shipping" id="c-shipping"></dd></div>
+        <div class="grand"><dt>Total</dt><dd data-testid="total" id="c-total"></dd></div>
+      </dl>
+      <button class="checkout-button" id="place-order" data-testid="place-order">Place order</button>
+      <p class="confirm" id="confirm" data-testid="confirmation" hidden>Thank you. Your order is confirmed.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>&copy; Mark Foy's</span><span id="build" data-testid="build"></span></footer>
+  <script type="module" src="src/ui/checkout.js"></script>
+</body>
+</html>
